@@ -29,22 +29,19 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-                <li>
-                    <a href="post.html">Sample Post</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-            </ul>
-        </div>
+        <?php if ( has_nav_menu( 'header-menu' ) ) {
+
+            $args = array(
+                'menu' => '',
+                'theme_location' => 'header-menu',
+                'container' => 'div',
+                'container_class' => 'collapse navbar-collapse',
+                'container_id' => 'bs-example-navbar-collapse-1',
+                'menu_class' => 'nav navbar-nav navbar-right'
+            );
+
+            wp_nav_menu($args);
+        } ?>
         <!-- /.navbar-collapse -->
     </div>
     <!-- /.container -->
