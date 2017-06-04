@@ -57,9 +57,9 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading">
-                    <h1>Clean Blog</h1>
+                    <h1><?php echo esc_html(get_bloginfo('name')); ?></h1>
                     <hr class="small">
-                    <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
+                    <span class="subheading"><?php echo esc_html(get_bloginfo('description')); ?></span>
                 </div>
             </div>
         </div>
